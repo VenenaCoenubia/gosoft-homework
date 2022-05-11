@@ -34,7 +34,7 @@ app.use((req, response, next)=>{
 
 app.post('/login', (req, response) => {
     if (req.body.user == "venena" && req.body.pass == "0000") {
-        const token = jwt.sign({ username: "admin" }, jwtsecret)
+        const token = jwt.sign({ username: "venena" }, jwtsecret)
         return response.json({token})
     }
     return response.status(404).send("Error invalid data");
